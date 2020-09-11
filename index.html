@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <title>Form Validation</title>
     <style>
+        h1 {text-align-last: center;}
           label {display: block;}
           body {padding: 25px;}
+        /* div {
+    margin: auto;
+    height: 10px;
+    width: 60%;
+    border: 1px solid #700707;
+    padding: 10px;
+  } */
     </style>
+    
   </head>
   <script>
     window.addEventListener("load", function() {
@@ -28,14 +38,17 @@
    });
   </script>
   <body>
+      <h1>Launch Checklist Form </h1>
+      <div class="center"> </div>
+    <div class="formquestions">
     <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
-      <label>Pilot Name <input type="text" name="pilotname"></label>
-      <label>Co-pilot Name<input type="text" name="copilotname"></label>
-      <label>Fuel Level (L)<input type="number" name="fuellvl"></label>
-      <label>Cargo Mass (kg)<input type="number" name="cargomass"></label>
+      <label class="centercontent">Pilot Name <input type="text" name="pilotname"></label>
+      <label class="centercontent">Co-pilot Name<input type="text" name="copilotname"></label>
+      <label class="centercontent">Fuel Level (L)<input type="number" name="fuellvl"></label>
+      <label class="centercontent">Cargo Mass (kg)<input type="number" name="cargomass"></label>
       <button>Submit</button>
     </form>
-
+</div>
 
   </body>
 </html>

@@ -1,5 +1,5 @@
 .center {
-    margin: auto;
+    margin: 10px auto;
     height: 10px;
     width: 60%;
     border: 1px solid #700707;
@@ -8,10 +8,11 @@
 
 .formquestions {
     
-    margin: auto;
-    width: 30%;
+    margin: 1px auto;
+    width: 40%;
     border: 1px solid #700707;
     padding: 10px;
+    display: block;
 }
 
 .centercontent {
@@ -19,5 +20,14 @@
 }
 
 .submitbutton{
+    background-color: lightgreen;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    width: 25%;
+    height: 30px;
+    margin-left: 350px;
+    margin-top: 15px;
     
+
 }

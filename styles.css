@@ -2,17 +2,21 @@
     margin: 10px auto;
     height: 10px;
     width: 60%;
-    border: 1px solid #700707;
+    border: 3px solid black;
     padding: 10px;
+    background-color: lightgray;
+    font-style: bold;
   }
 
 .formquestions {
     
     margin: 1px auto;
     width: 40%;
-    border: 1px solid #700707;
+    border: 3px solid black;
     padding: 10px;
     display: block;
+    background-color: lightgray;
+
 }
 
 .centercontent {
@@ -34,3 +38,13 @@
 h1 {text-align-last: center;}
 label {display: block;}
 body {padding: 25px;}
+
+.lastpart {
+    margin: 10px auto;
+    height: 300px;
+    width: 60%;
+    border: 3px solid black;
+    padding: 20px;
+    background-color: lightgray;
+
+}

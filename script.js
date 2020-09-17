@@ -9,14 +9,12 @@ window.addEventListener("load", function() {
               if (pilot.value === "" || copilot.value === "" || fuel.value === "" || cargo.value === "") {
                   alert("All fields are required!");
                   event.preventDefault();
-              }  else if(pilot.value.toLoweCase() != pilot.value.toUpperCase() || copilot.value.toLoweCase() != copilot.value.toUpperCase() ||
+              } else if(pilot.value.toLoweCase() != pilot.value.toUpperCase() || copilot.value.toLoweCase() != copilot.value.toUpperCase() ||
                     isNaN(fuel.value) || isNaN(cargo.value) ){
                     alert("Make sure to enter valid information for each field!");
                     event.preventDefault();
               }
-              console.log(typeof pilot.value);
-              console.log(typeof copilot.value);
-              console.log(typeof fuel.value);
-              console.log(typeof cargo.value);
+              
+              
     });
  });

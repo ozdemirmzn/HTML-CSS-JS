@@ -6,15 +6,19 @@ window.addEventListener("load", function() {
        let fuel = document.querySelector("input[name=fuellvl]");
        let cargo = document.querySelector("input[name=cargomass]");
 
+    //    alert(isNaN(fuel.value));
+
               if (pilot.value === "" || copilot.value === "" || fuel.value === "" || cargo.value === "") {
                   alert("All fields are required!");
                   event.preventDefault();
-              } else if(pilot.value.toLoweCase() != pilot.value.toUpperCase() || copilot.value.toLoweCase() != copilot.value.toUpperCase() ||
+              } else if(!isNaN(pilot.value) ||
                     isNaN(fuel.value) || isNaN(cargo.value) ){
                     alert("Make sure to enter valid information for each field!");
                     event.preventDefault();
               }
               
-              
     });
  });
+
+
+//  pilot.value.toLowerCase() != pilot.value.toUpperCase() || copilot.value.toLowerCase() != copilot.value.toUpperCase() ||

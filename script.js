@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
                   alert("All fields are required!");
                   event.preventDefault();
               } else if(stringChecker(pilot.value) || stringChecker(copilot.value) ||
-                    isNaN(fuel.value) || isNaN(cargo.value) ){
+                    isNaN(fuel.value) || isNaN(cargo.value) || fuel.value < 0 || cargo.value < 0 ){
                     alert("Make sure to enter valid information for each field!");
                     event.preventDefault();
               }

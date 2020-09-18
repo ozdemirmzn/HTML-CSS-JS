@@ -1,3 +1,14 @@
+function stringChecker (item){
+    let check = false;
+    let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for(let i = 0; i<item.length; i++){
+            if(str.indexOf(item[i]) === -1){
+                check = true;
+                break;
+            }
+    } return check;
+}
+
 window.addEventListener("load", function() {
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
@@ -11,7 +22,7 @@ window.addEventListener("load", function() {
               if (pilot.value === "" || copilot.value === "" || fuel.value === "" || cargo.value === "") {
                   alert("All fields are required!");
                   event.preventDefault();
-              } else if(!isNaN(pilot.value) ||
+              } else if(stringChecker(pilot.value) || stringChecker(copilot.value) ||
                     isNaN(fuel.value) || isNaN(cargo.value) ){
                     alert("Make sure to enter valid information for each field!");
                     event.preventDefault();

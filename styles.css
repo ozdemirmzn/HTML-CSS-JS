@@ -1,50 +1,53 @@
-.center {
-    margin: 10px auto;
-    height: 10px;
-    width: 60%;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: lightgray;
-    font-style: bold;
-  }
-
-.formquestions {
-    
-    margin: 1px auto;
-    width: 40%;
-    border: 3px solid black;
-    padding: 10px;
-    display: block;
-    background-color: lightgray;
-
+h1 {
+    text-align: center;
 }
 
-.centercontent {
-    text-align:center ;
+div {
+    text-align: left;
 }
 
-.submitbutton{
-    background-color: darkgreen;
+#faultyItems {
+    visibility: hidden;   
+}
+
+#launchForm {
+    background-color: #ECF0F1;
+    text-align: center;
+    margin: auto;
+    width: 25%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#launchStatusCheck {
+    background-color: #ECF0F1;
+    text-align: center;
+    margin: 50px auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#missionTarget img {
+    max-width: 40%;
+    max-height: 250px;
+}
+
+#missionTarget {
+    background-color: #ECF0F1;
+    text-align: center;
+    margin: 50px auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+button {
+    background-color: #419f6a;
     border: none;
     color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 25%;
     height: 30px;
-    margin-left: 350px;
-    margin-top: 15px;
-    
-
-}
-h1 {text-align-last: center;}
-label {display: block;}
-body {padding: 25px;}
-
-.lastpart {
-    margin: 10px auto;
-    height: 300px;
-    width: 60%;
-    border: 3px solid black;
-    padding: 20px;
-    background-color: lightgray;
-
+    margin: 10px 0;
 }

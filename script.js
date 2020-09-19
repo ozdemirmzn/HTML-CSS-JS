@@ -10,14 +10,36 @@ function stringChecker (item){
 }
 
 window.addEventListener("load", function() {
+    // json fetch
+    
+    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
+              
+              response.json().then( function(json) {
+                let div = document.querySelector("div[id=missionTarget]");
+                let randomPlanet = Math.floor(Math.random() * json.length);
+                div.innerHTML = `
+                <h2>Mission Destination</h2>
+            <ol>
+               <li>Name: ${json[randomPlanet].name}</li>
+               <li>Diameter: ${json[randomPlanet].diameter}</li>
+               <li>Star: ${json[randomPlanet].star}</li>
+               <li>Distance from Earth: ${json[randomPlanet].distance}</li>
+               <li>Number of Moons: ${json[randomPlanet].moons}</li>
+            </ol>
+            <img src="${json[randomPlanet].image}">
+                `;
+              });
+            });
+
+    // form validation 
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
-       let pilot = document.querySelector("input[name=pilotname]");
-       let copilot = document.querySelector("input[name=copilotname]");
-       let fuel = document.querySelector("input[name=fuellvl]");
-       let cargo = document.querySelector("input[name=cargomass]");
+       let pilot = document.querySelector("input[name=pilotName]");
+       let copilot = document.querySelector("input[name=copilotName]");
+       let fuel = document.querySelector("input[name=fuelLevel]");
+       let cargo = document.querySelector("input[name=cargoMass]");
 
-    //    alert(isNaN(fuel.value));
+    
 
               if (pilot.value === "" || copilot.value === "" || fuel.value === "" || cargo.value === "") {
                   alert("All fields are required!");
@@ -30,6 +52,3 @@ window.addEventListener("load", function() {
               
     });
  });
-
-
-//  pilot.value.toLowerCase() != pilot.value.toUpperCase() || copilot.value.toLowerCase() != copilot.value.toUpperCase() ||

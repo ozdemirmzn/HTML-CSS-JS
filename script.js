@@ -15,9 +15,9 @@ window.addEventListener("load", function() {
     fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
               
               response.json().then( function(json) {
-                let div = document.querySelector("div[id=missionTarget]");
+                let destination = document.querySelector("div[id=missionTarget]");
                 let randomPlanet = Math.floor(Math.random() * json.length);
-                div.innerHTML = `
+                destination.innerHTML = `
                 <h2>Mission Destination</h2>
             <ol>
                <li>Name: ${json[randomPlanet].name}</li>
